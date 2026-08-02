@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow3" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="boltFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGlow3)"/>
+  <rect width="800" height="450" fill="url(#grid3)"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#242424" stroke-width="2"/>
+
+  <!-- left bracket -->
+  <text x="230" y="270" font-family="monospace" font-size="180" fill="#ffffff" fill-opacity="0.9" text-anchor="middle">&lt;</text>
+  <!-- right bracket -->
+  <text x="570" y="270" font-family="monospace" font-size="180" fill="#ffffff" fill-opacity="0.9" text-anchor="middle">/&gt;</text>
+
+  <!-- lightning bolt center -->
+  <path d="M410,110 L350,240 L400,240 L370,340 L470,190 L415,190 Z"
+        fill="url(#boltFill)" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- orbit particles -->
+  <circle cx="180" cy="120" r="4" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="620" cy="340" r="4" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="140" cy="330" r="3" fill="#ffffff" fill-opacity="0.5"/>
+  <circle cx="650" cy="130" r="3" fill="#ffffff" fill-opacity="0.5"/>
+
+  <path d="M40 40 L40 70 M40 40 L70 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 40 L760 70 M760 40 L730 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M40 410 L40 380 M40 410 L70 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 410 L760 380 M760 410 L730 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+
+  <text x="60" y="405" font-family="monospace" font-size="15" fill="#a0a0a0" letter-spacing="2">HACKATHONS // RAPID PROTOTYPING</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#6a6a6a"/>
+    </linearGradient>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- dark circular seal -->
+  <circle cx="100" cy="100" r="96" fill="#080808"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- signature-style "D" — single flowing stroke -->
+  <path
+    d="M52,64
+       C52,58 56,54 62,54
+       L62,146
+       C56,146 52,142 52,136
+       Z"
+    fill="url(#inkGrad)"
+  />
+  <path
+    d="M62,58
+       C92,52 118,64 118,92
+       C118,116 96,132 68,130"
+    fill="none"
+    stroke="url(#inkGrad)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <!-- signature-style "K" — flowing diagonal strokes, ligatured to the D -->
+  <path
+    d="M100,58 L100,146"
+    fill="none"
+    stroke="url(#inkGrad)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+  <path
+    d="M100,104 C118,90 134,74 148,58"
+    fill="none"
+    stroke="url(#inkGrad)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+  <path
+    d="M112,96 C126,110 138,126 150,142"
+    fill="none"
+    stroke="url(#inkGrad)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <!-- signature flourish underline, tapering like a pen stroke -->
+  <path
+    d="M46,158 C80,172 122,172 156,156"
+    fill="none"
+    stroke="url(#inkGrad)"
+    stroke-width="4"
+    stroke-linecap="round"
+    opacity="0.85"
+  />
+  <circle cx="158" cy="154" r="2.6" fill="#ffffff"/>
+</svg>

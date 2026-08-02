@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow4" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGlow4)"/>
+  <rect width="800" height="450" fill="url(#grid4)"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#242424" stroke-width="2"/>
+
+  <!-- large gear -->
+  <g transform="translate(310,225)">
+    <g id="gearTeeth">
+      <rect x="-8" y="-118" width="16" height="30" fill="#ffffff"/>
+      <rect x="-8" y="88" width="16" height="30" fill="#ffffff"/>
+      <rect x="-118" y="-8" width="30" height="16" fill="#ffffff"/>
+      <rect x="88" y="-8" width="30" height="16" fill="#ffffff"/>
+      <rect x="-8" y="-118" width="16" height="30" fill="#ffffff" transform="rotate(45)"/>
+      <rect x="-8" y="88" width="16" height="30" fill="#ffffff" transform="rotate(45)"/>
+      <rect x="-118" y="-8" width="30" height="16" fill="#ffffff" transform="rotate(45)"/>
+      <rect x="88" y="-8" width="30" height="16" fill="#ffffff" transform="rotate(45)"/>
+    </g>
+    <circle r="85" fill="#0a0a0a" stroke="#ffffff" stroke-width="4"/>
+    <circle r="32" fill="none" stroke="#ffffff" stroke-width="4"/>
+  </g>
+
+  <!-- small gear -->
+  <g transform="translate(440,140)">
+    <g>
+      <rect x="-5" y="-62" width="10" height="18" fill="#a0a0a0"/>
+      <rect x="-5" y="44" width="10" height="18" fill="#a0a0a0"/>
+      <rect x="-62" y="-5" width="18" height="10" fill="#a0a0a0"/>
+      <rect x="44" y="-5" width="18" height="10" fill="#a0a0a0"/>
+      <rect x="-5" y="-62" width="10" height="18" fill="#a0a0a0" transform="rotate(45)"/>
+      <rect x="-5" y="44" width="10" height="18" fill="#a0a0a0" transform="rotate(45)"/>
+      <rect x="-62" y="-5" width="18" height="10" fill="#a0a0a0" transform="rotate(45)"/>
+      <rect x="44" y="-5" width="18" height="10" fill="#a0a0a0" transform="rotate(45)"/>
+    </g>
+    <circle r="45" fill="#0a0a0a" stroke="#a0a0a0" stroke-width="3"/>
+    <circle r="16" fill="none" stroke="#a0a0a0" stroke-width="3"/>
+  </g>
+
+  <!-- terminal prompt to the right -->
+  <g transform="translate(500,255)" font-family="monospace" fill="#ffffff">
+    <text x="0" y="0" font-size="20">$ pip install .</text>
+    <text x="0" y="32" font-size="20" fill="#a0a0a0">$ python3 tool.py --run</text>
+    <text x="0" y="64" font-size="20">$ git push origin main</text>
+  </g>
+
+  <path d="M40 40 L40 70 M40 40 L70 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 40 L760 70 M760 40 L730 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M40 410 L40 380 M40 410 L70 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 410 L760 380 M760 410 L730 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+
+  <text x="60" y="405" font-family="monospace" font-size="15" fill="#a0a0a0" letter-spacing="2">OPEN SOURCE // PYTHON TOOLING</text>
+</svg>

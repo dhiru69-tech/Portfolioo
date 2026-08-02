@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow2" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGlow2)"/>
+  <rect width="800" height="450" fill="url(#grid2)"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#242424" stroke-width="2"/>
+
+  <!-- terminal window -->
+  <g transform="translate(150,90)">
+    <rect x="0" y="0" width="500" height="270" rx="10" fill="#0a0a0a" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="0" y="0" width="500" height="36" rx="10" fill="#141414"/>
+    <circle cx="22" cy="18" r="6" fill="#5a5a5a"/>
+    <circle cx="44" cy="18" r="6" fill="#5a5a5a"/>
+    <circle cx="66" cy="18" r="6" fill="#5a5a5a"/>
+    <text x="250" y="23" font-family="monospace" font-size="13" fill="#808080" text-anchor="middle">root@ctf:~$</text>
+
+    <!-- terminal text lines -->
+    <text x="24" y="70" font-family="monospace" font-size="16" fill="#ffffff">$ nc target.ctf 1337</text>
+    <text x="24" y="98" font-family="monospace" font-size="16" fill="#a0a0a0">[+] connecting...</text>
+    <text x="24" y="126" font-family="monospace" font-size="16" fill="#a0a0a0">[+] parsing response headers</text>
+    <text x="24" y="154" font-family="monospace" font-size="16" fill="#ffffff">flag{w3b_f0r3ns1cs_0s1nt}</text>
+    <rect x="24" y="180" width="14" height="22" fill="#ffffff"/>
+
+    <!-- flag icon -->
+    <g transform="translate(420,60)">
+      <line x1="0" y1="0" x2="0" y2="140" stroke="#ffffff" stroke-width="4"/>
+      <path d="M0,0 L60,18 L0,36 Z" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <path d="M40 40 L40 70 M40 40 L70 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 40 L760 70 M760 40 L730 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M40 410 L40 380 M40 410 L70 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 410 L760 380 M760 410 L730 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+
+  <text x="60" y="405" font-family="monospace" font-size="15" fill="#a0a0a0" letter-spacing="2">CTF // WEB · FORENSICS · OSINT</text>
+</svg>

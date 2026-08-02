@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow1" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="shieldStroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#808080"/>
+    </linearGradient>
+    <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGlow1)"/>
+  <rect width="800" height="450" fill="url(#grid1)"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#242424" stroke-width="2"/>
+
+  <!-- scan line accents -->
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#ffffff" stroke-opacity="0.06"/>
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- shield -->
+  <g transform="translate(400,225)">
+    <path d="M0,-115 L95,-80 L95,10 C95,80 45,120 0,140 C-45,120 -95,80 -95,10 L-95,-80 Z"
+          fill="#0a0a0a" stroke="url(#shieldStroke)" stroke-width="3"/>
+    <path d="M0,-115 L95,-80 L95,10 C95,80 45,120 0,140 C-45,120 -95,80 -95,10 L-95,-80 Z"
+          fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="10"/>
+
+    <!-- lock -->
+    <rect x="-35" y="-10" width="70" height="55" rx="6" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <path d="M-20,-10 V-30 a20,20 0 0 1 40,0 V-10" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="0" cy="15" r="7" fill="#ffffff"/>
+    <line x1="0" y1="22" x2="0" y2="34" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- corner brackets -->
+  <path d="M40 40 L40 70 M40 40 L70 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 40 L760 70 M760 40 L730 40" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M40 410 L40 380 M40 410 L70 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <path d="M760 410 L760 380 M760 410 L730 410" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+
+  <text x="60" y="405" font-family="monospace" font-size="15" fill="#a0a0a0" letter-spacing="2">CODEALPHA // CYBERSECURITY INTERNSHIP</text>
+</svg>

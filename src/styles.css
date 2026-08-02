@@ -1,0 +1,281 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Cinematic cybersecurity portfolio design system.
+ * Palette derived from the hero video: deep navy / near-black backgrounds,
+ * monitor blue as the primary accent, muted cyan, and warm pink/wood accents.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Video-derived scene tokens */
+  --color-abyss: var(--abyss);
+  --color-navy: var(--navy);
+  --color-panel: var(--panel);
+  --color-cyan: var(--cyan);
+  --color-blush: var(--blush);
+  --color-wood: var(--wood);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Monochrome editorial scene tokens — dark sections */
+  --abyss: #050505;
+  --navy: #0a0a0a;
+  --panel: #121212;
+
+  --background: #050505;
+  --foreground: #ffffff;
+
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+
+  /* Neutral accent replaces the former blue */
+  --primary: #ffffff;
+  --primary-foreground: #050505;
+  --cyan: #d8d8d8;
+
+  --secondary: #141414;
+  --secondary-foreground: #f5f5f3;
+  --muted: #141414;
+  --muted-foreground: #a0a0a0;
+  --accent: #1c1c1c;
+  --accent-foreground: #f5f5f3;
+
+  --blush: #cfcfcf;
+  --wood: #707070;
+
+  --destructive: #b4b4b4;
+  --destructive-foreground: #050505;
+
+  --border: #242424;
+  --input: #2c2c2c;
+  --ring: rgb(255 255 255 / 45%);
+
+  --glass: rgb(10 10 10 / 72%);
+  --shadow-ambient: 0 24px 70px -34px rgb(255 255 255 / 18%);
+  --gradient-glow: radial-gradient(
+    60% 60% at 50% 0%,
+    rgb(255 255 255 / 6%),
+    transparent 70%
+  );
+}
+
+/*
+ * Light editorial sections (Skills, Experience, Contact).
+ * Only the token layer changes — every component keeps its own markup,
+ * animation and interaction code untouched.
+ */
+.theme-light {
+  --abyss: #f5f5f3;
+  --navy: #ffffff;
+  --panel: #ffffff;
+
+  --background: #f5f5f3;
+  --foreground: #050505;
+
+  --card: #ffffff;
+  --card-foreground: #050505;
+  --popover: #ffffff;
+  --popover-foreground: #050505;
+
+  --primary: #050505;
+  --primary-foreground: #f5f5f3;
+  --cyan: #3a3a3a;
+
+  --secondary: #ececea;
+  --secondary-foreground: #050505;
+  --muted: #ececea;
+  --muted-foreground: #606060;
+  --accent: #e4e4e1;
+  --accent-foreground: #050505;
+
+  --blush: #4a4a4a;
+  --wood: #888888;
+
+  --destructive: #5a5a5a;
+  --destructive-foreground: #ffffff;
+
+  --border: #d8d8d8;
+  --input: #d8d8d8;
+  --ring: rgb(5 5 5 / 45%);
+
+  --glass: rgb(255 255 255 / 82%);
+  --shadow-ambient: 0 20px 50px -28px rgb(5 5 5 / 28%);
+  --gradient-glow: radial-gradient(
+    60% 60% at 50% 0%,
+    rgb(5 5 5 / 5%),
+    transparent 70%
+  );
+
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: oklch(1 0 0 / 22%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@utility glass-panel {
+  background: var(--glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px) saturate(130%);
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility section-shell {
+  position: relative;
+  width: 100%;
+  padding-inline: 1.25rem;
+  padding-block: clamp(4.5rem, 10vw, 8.5rem);
+}
+
+@utility ambient-top {
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 340px;
+    background: var(--gradient-glow);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+#skills h2 {
+  line-height: 0.85;
+}
+/* Rounded "curve" section reveal */
+.curve-section {
+  --curve-radius: 40px;
+}
+@media (min-width: 1024px) {
+  .curve-section {
+    --curve-radius: 64px;
+  }
+}
+
+/* --- Tools reel (Stack & Credentials section only) --------------------- */
+:root {
+  --tool-ink: rgba(245, 245, 243, 0.96);
+  --tool-ink-dim: rgba(245, 245, 243, 0.18);
+  --tool-meta: rgba(245, 245, 243, 0.8);
+  --tool-meta-dim: rgba(245, 245, 243, 0.22);
+  --tool-pill: rgba(255, 255, 255, 0.12);
+  --tool-pill-off: rgba(255, 255, 255, 0);
+
+  --tool-title-size: clamp(1.75rem, 4.2vw, 3.75rem);
+  --tool-row-height: calc(var(--tool-title-size) * 1.5);
+}
+
+@utility tool-row-wrap {
+  height: var(--tool-row-height);
+}
+
+@utility tool-row {
+  height: var(--tool-row-height);
+}
+
+@utility tool-title {
+  font-size: var(--tool-title-size);
+  font-weight: 500;
+}
+
+@utility tool-reel-viewport {
+  height: calc(var(--tool-row-height) * 5);
+}
