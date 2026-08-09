@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { ShieldCheck, Radar } from "lucide-react";
+import { Radar } from "lucide-react";
 import { LogoLoop, type LogoItem } from "@/components/LogoLoop";
 import { ToolsReel } from "@/components/tools/ToolsReel";
 import { SectionHeading } from "./Reveal";
@@ -33,15 +33,6 @@ function ToolIcon({ label }: { label: string }) {
   );
 }
 
-function Credential({ label }: { label: string }) {
-  return (
-    <span className="tc-badge tc-badge--cred">
-      <ShieldCheck size={26} strokeWidth={1.5} />
-      <span className="tc-badge__label">{label}</span>
-    </span>
-  );
-}
-
 const items: LogoItem[] = [
   { node: <Brand slug="kalilinux" label="Kali Linux" />, ariaLabel: "Kali Linux" },
   { node: <ToolIcon label="Nmap" />, ariaLabel: "Nmap" },
@@ -55,17 +46,13 @@ const items: LogoItem[] = [
   { node: <Brand slug="nodedotjs" label="Node.js" />, ariaLabel: "Node.js" },
   { node: <Brand slug="fastapi" label="FastAPI" />, ariaLabel: "FastAPI" },
   { node: <Brand slug="postgresql" label="PostgreSQL" />, ariaLabel: "PostgreSQL" },
-  { node: <Credential label="eJPT" />, ariaLabel: "eJPT certification" },
-  { node: <Credential label="PNPT" />, ariaLabel: "PNPT certification" },
-  { node: <Credential label="OSCP" />, ariaLabel: "OSCP certification" },
-  { node: <Credential label="CRTO" />, ariaLabel: "CRTO certification" },
   { node: <Brand slug="hackthebox" label="Hack The Box" />, ariaLabel: "Hack The Box" },
   { node: <Brand slug="tryhackme" label="TryHackMe" />, ariaLabel: "TryHackMe" },
 ];
 
 /**
- * Standalone "Stack & Credentials" band: a slow marquee of icon + label badges.
- * Tool logos use real brand marks; certifications share one shield badge style.
+ * Standalone "Stack" band: a slow marquee of icon + label badges
+ * showing the tools and technologies actually used day to day.
  */
 export function ToolsCredentials() {
   return (
@@ -83,9 +70,9 @@ export function ToolsCredentials() {
     >
       <div className="mx-auto w-full max-w-7xl px-5">
         <SectionHeading
-          label="03 — Stack & Credentials"
-          title="Tools & certifications"
-          description="The software I actually run day to day, plus the certification tracks I'm working through."
+          label="03 — Stack"
+          title="Tools I use"
+          description="The software and tools I actually run day to day."
         />
       </div>
 
@@ -104,7 +91,7 @@ export function ToolsCredentials() {
           fadeOutColor={LOOP_BG}
           pauseOnHover
           scaleOnHover
-          ariaLabel="Tools, tech stack and certification tracks"
+          ariaLabel="Tools and tech stack"
         />
       </div>
 

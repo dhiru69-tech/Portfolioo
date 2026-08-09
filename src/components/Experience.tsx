@@ -46,7 +46,10 @@ export function Experience() {
             previewSize="lg"
             soundEnabled
             soundVolume={0.14}
-            hint="Hover, scroll or use arrow keys"
+            activateOnHover={false}
+            scrollToNavigate={false}
+            showProgress={false}
+            hint=""
             label="Experience timeline"
             className="rounded-2xl"
           />
